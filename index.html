@@ -1,38 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            TkLineNums
-        </title>
-        <link rel="stylesheet" href="style.css" class="css">
-        <link rel="icon" href="../images/TkLineNumsPhoto.png">
-    </head>
-    <body>
-        <center>
-            <h1>
-                TkLineNums
-            </h1>
-            <p>
-                TkLineNums is a simple line numbering widget for Tkinter. It supports ttk themes through the set_to_ttk_style method.
-            </p>
-            <img src="images/TkLineNumsPhoto.png", alt="Photo of Linenumbers", class="img_fit", style="vertical-align:middle;margin:0px 50px">
-            <h2>
-                Features:
-            </h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TkLineNums</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../images/TkLineNumsPhoto.png">
+</head>
+<body>
+    <div class="center-parent">
+        <div class="left"></div>
+        <div class="mid">
+            <h1>TkLineNums</h1>
+            <p>TkLineNums is a simple line numbering widget for Python's tkinter GUI library. It directly connects to a Text widget and even supports ttk themes through the set_to_ttk_style() method.</p>
+            <img src="images/TkLineNumsPhoto.png" alt="Photo of Line numbers" class="img_fit" style="vertical-align:middle;margin:0px 50px">
+            <h2>Features of the TkLineNums widget:</h2>
             <ul class="ul">
-            <li>Clicking on line numbers will set the insert to the beginning of the line.</li>
-            <li>Clicking on line numbers will set the insert to the beginning of the line.</li>
-            <li>Scrolling the linebar will scroll the text widget</li>
-            <li>Supports ttk themes</li>
-            <li>Supports left, right, and center alignment with the `justify` option</li>
+                <li>Clicking on line numbers will set the insert to the beginning of the line.</li>
+                <li>Shift clicking will select all text from the end of the line clicked by cursor and the insert position.</li>
+                <li>Scrolling the line bar will scroll the text widget (and vice versa).</li>
+                <li>Supports ttk themes (by usage of the .set_to_ttk_style() method).</li>
+                <li>Supports left, right, and center alignment with the -justify option.</li>
+                <li>Clicking and then dragging the mouse will scroll the text widget (see <a href="https://github.com/Moosems/TkLineNums/pull/8">#8</a>).</li>
             </ul>
-            <a href="https://github.com/Moosems/TkLineNums">
-                <button class="button">
-                    Github
-                </button>
-            </a>
-        </center>
-    </body>
-</html>
+            <a href="https://github.com/Moosems/TkLineNums"><button class="button">GitHub</button></a>
+        </div>
+        <div class="right"></div>
+    </div>
+    <h2 align="center">Installation</h2>
+    <p align="center"><code>pip install tklinenums</code></p>
+
+    <h2 align="center">Documentation</h2>
+    <p align="center">The following options are available when creating an instance of the TkLineNums widget:</p>
+    <table align="center">
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>master</td>
+                <td>The parent widget</td>
+                <td>Tkinter widget (defaults to tkinter.Misc)</td>
+            </tr>
+            <tr>
+                <td>editor</td>
+                <td>The Text widget the line numbers will connect to</td>
+                <td>Tkinter Text widget (or child class)</td>
+            </tr>
+            <tr>
+                <td>justify</td>
+                <td>The alignment of the line numbers</td>
+                <td>A string as either "left", "right", or "center"</td>
+            </tr>
+            <tr>
+                <td>*args</td>
+                <td>Arguments for the Canvas widget</td>
+                <td>Any arguments used for the Canvas widget</td>
+            </tr>
+            <tr>
+                <td>**kwargs</td>
+                <td>Keyword arguments for the Canvas widget</td>
+                <td>Any keyword arguments used for the Canvas widget</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="center-parent">
+        <div class="left"></div>
+        <div class="mid">
+            <p>
+                To run the example, run <code>python3 tests/example.py</code> from the project directory.
+            </p>
+            
+            <p>
+                To contribute to the project, simply fork the repository, make your changes, and submit a pull request. Be sure to include a clear description of your changes and why you think they are important.
+            </p>
+            
+            <footer>
+                <p>
+                    &copy; 2023 TkLineNums | <a href="https://github.com/Moosems/TkLineNums/issues">Report an Issue</a>
+                </p>
+            </footer>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
